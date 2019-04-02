@@ -1,9 +1,11 @@
+CREATE EXTENSION uri;
+
 CREATE TABLE authority(
   authority varchar(255) PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE account(
-  account_id uuid PRIMARY KEY NOT NULL,
+  account_id uri PRIMARY KEY NOT NULL,
   name varchar(255) NOT NULL,
   surname varchar(255) NOT NULL,
   email varchar(255) UNIQUE NOT NULL,
